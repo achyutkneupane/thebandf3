@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway&family=Righteous&family=Montserrat&family=Permanent+Marker&display=swap");
+
+:root {
+    --prim: #8f5100;
+    --primlight: #b99360;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primlight);
+    font-family: "Raleway", sans-serif;
+    color: #000;
+}
+.transImage {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.bgImage {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+.shadowbox {
+    padding: 3rem 1.25rem;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    z-index: 2;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Title {
+    font-size: 2rem;
+    font-family: "Righteous", cursive;
+    color: var(--prim);
+}
+/* Navbar */
+.navbar-b {
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+    color: #fff;
+    padding-top: 20px;
+}
+.navbar-b a {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+.navbar-nav a {
+    font-size: 1.3rem;
+}
+.navbar-brand {
+    font-size: 2rem;
+    font-family: "Righteous", cursive;
+    font-weight: bold;
+}
+/* Banner */
+.bannerImage {
+    height: 100vh;
+    position: relative;
+    color: #fff;
+}
+.bannerSection {
+    padding-top: 75vh;
+}
+.bannerTitle {
+    font-family: "Permanent Marker", cursive;
+    font-size: 8vw;
+}
+
+/* Profile */
+.profileText {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}

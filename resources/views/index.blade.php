@@ -1,0 +1,9 @@
+@extends('layouts.head')
+@section('title','Home')
+@section('content')
+    @include('page.banner')
+    @include('page.profile')
+    @include('page.gallery')
+    @include('page.members')
+    @include('page.contact')
+@endsection
