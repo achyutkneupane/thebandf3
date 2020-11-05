@@ -2,7 +2,7 @@
 
 :root {
     --prim: #8f5100;
-    --primlight: #b99360;
+    --primlight: #d8be9d;
 }
 body {
     width: 100%;
@@ -30,15 +30,23 @@ body {
     padding: 3rem 1.25rem;
     position: relative;
     background-color: #fff;
-    margin-bottom: 3rem;
     z-index: 2;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
-
 .Title {
     font-size: 2rem;
     font-family: "Righteous", cursive;
     color: var(--prim);
+}
+.vLine {
+    width: 10vw;
+    height: 5px;
+    background-color: var(--prim);
+    margin: 0 auto;
+    margin-bottom: 2vh;
+}
+.shadowText {
+    text-shadow: 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;
 }
 /* Navbar */
 .navbar-b {
@@ -59,6 +67,121 @@ body {
     font-family: "Righteous", cursive;
     font-weight: bold;
 }
+.navbar-b {
+    color: #fff;
+}
+.navbar-b a {
+    color: #fff;
+}
+
+.navbar-b .dropdown-menu {
+    background: transparent;
+    border: 0;
+}
+
+.navbar-b .dropdown-menu .dropdown-item {
+    padding: 0.3rem 0.7rem;
+    transition: all 500ms ease;
+}
+.navbar-b .dropdown-menu .dropdown-item:hover {
+    background-color: #c3c3c3;
+    color: #000;
+    transition: all 500ms ease;
+}
+.navbar-b .dropdown-menu .dropdown-item.active {
+    background-color: #c3c3c3;
+}
+.navbar-toggler {
+    position: relative;
+    right: 16px;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+
+.navbar-trans .navbar-toggler span,
+.navbar-reduce .navbar-toggler span,
+.navbar-non-coll .navbar-toggler span {
+    display: block;
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    left: 0;
+    opacity: 1;
+}
+.navbar-trans .navbar-toggler span {
+    background-color: #fff;
+}
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+    transition: -webkit-transform 0.35s ease-in-out;
+    transition: transform 0.35s ease-in-out;
+    transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    opacity: 0.9;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px;
+    visibility: hidden;
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    opacity: 0.9;
+}
+.navbar-trans {
+    transition: all 0.5s ease-in-out;
+    padding-top: 18px;
+}
+.navbar-reduce {
+    transition: all 0.5s ease-in-out;
+    padding-top: 3px;
+    background-color: #a26f2c;
+    color: #fff;
+}
+.navbar-reduce a {
+    color: #fff;
+}
+.navbar-reduce .dropdown-menu {
+    background: #fff;
+    border: 1px solid #fff;
+}
+.navbar-trans .dropdown-menu {
+    background: #fff;
+    border: 1px solid #fff;
+}
+.navbar-trans .dropdown-menu a {
+    color: #141446;
+}
+.navbar-non-coll {
+    transition: all 0.5s ease-in-out;
+    background-color: #fff;
+    color: #141446;
+}
+.navbar-non-coll a {
+    color: #141446;
+}
+.navbar-non-coll .dropdown-menu {
+    background: #fff;
+    border: 1px solid #fff;
+}
 /* Banner */
 .bannerImage {
     height: 100vh;
@@ -72,10 +195,22 @@ body {
     font-family: "Permanent Marker", cursive;
     font-size: 8vw;
 }
-
 /* Profile */
 .profileText {
     font-size: 1rem;
     text-align: justify;
     text-justify: inter-word;
+}
+
+/* Member */
+.memberImage {
+    position: relative;
+    color: #000;
+}
+.membersSlide {
+    height: 25vh;
+}
+.w-100 {
+    width: 100% !important;
+    height: 75vh;
 }
