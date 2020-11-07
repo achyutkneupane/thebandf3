@@ -3,6 +3,7 @@
 :root {
     --prim: #8f5100;
     --primlight: #d8be9d;
+    --footer: #a26f26;
 }
 body {
     width: 100%;
@@ -213,4 +214,69 @@ body {
 .w-100 {
     width: 100% !important;
     height: 75vh;
+}
+
+/* Contact */
+.contactText {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Social Icons */
+.btn-social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.btn-facebook {
+    background: #3b579d;
+    color: #ffffff;
+}
+
+.btn-youtube {
+    background: #e52d27;
+    color: #ffffff;
+}
+
+.btn-instagram {
+    background: #dc4a38;
+    color: #ffffff;
+}
+.btn-envelope {
+    background: #3c3c3c;
+    color: #ffffff;
+}
+.btn-facebook:hover,
+.btn-facebook:focus {
+    background: #2d4278;
+    color: #ffffff;
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus {
+    background: #c21d17;
+    color: #ffffff;
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus {
+    background: #bf3322;
+    color: #ffffff;
+}
+.btn-envelope:hover,
+.btn-envelope:focus {
+    background: #2c2c2c;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer);
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.footer a {
+    color: #fff;
 }

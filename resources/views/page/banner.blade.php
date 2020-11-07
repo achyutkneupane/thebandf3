@@ -1,4 +1,4 @@
-<div class="bannerImage bgImage" style="background-image: url('{{ asset('statics/thebandf3.jpg') }}');">
+<div class="bannerImage bgImage" style="background-image: url('{{ asset('statics/thebandf3.jpg') }}');" id="top">
     <div class="transImage"></div>
     <div class="bannerSection container text-center">
         <div class="row">

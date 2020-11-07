@@ -1,4 +1,4 @@
-<div class="memberImage bgImage jumbotron jumbotron-fluid d-flex align-items-center" style="background-image: url({{ asset('statics/bg.jpg') }});">
+<div class="memberImage bgImage jumbotron jumbotron-fluid d-flex align-items-center" style="background-image: url({{ asset('statics/bg.jpg') }});" id="member">
     <div class="transImage"></div>
     <div class="memberSection container-fluid text-center">
         <div class="row justify-content-center">
@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <img class="d-block w-100" src="{{ asset('statics/members/saugat.png') }}" alt="Saugat Rai">
-                                <div class="carousel-caption d-none d-md-block mt-3 shadowText">
+                                <div class="carousel-caption d-none d-md-block shadowText">
                                     <h1>Saugat Rai</h1>
                                     <p>Vocalist</p>
                                 </div>
