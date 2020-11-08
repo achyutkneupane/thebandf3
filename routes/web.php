@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\BandMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,10 @@ use App\Http\Controllers\PagesController;
 */
 
 Route::get('/', [PagesController::class, 'index'])->name('index');
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+Route::group(['prefix' => 'admin/', 'middleware' => 'auth'], function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+    Route::resource('setting', SettingController::class);
+    Route::resource('band', BandMemberController::class);
+});
