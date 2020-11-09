@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title','Setting')
-@section('sectionTitle','Site Setting')
+@section('title','Edit Band Member')
+@section('sectionTitle','Edit Member')
 @section('content')
 <div class="container">
     <div class="row">
@@ -8,7 +8,7 @@
             <thead>
                 <tr>
                     <th scope="col">
-                        Setting
+                        Field
                     </th>
                     <th scope="col">
                         Value
@@ -16,23 +16,31 @@
                 </tr>
             </thead>
             <tbody>
-                <form action="{{ route('setting.update', $setting->id) }}" method="post">
+                <form action="{{ route('member.update', $member->id) }}" method="post">
                     @csrf
                     @method('PUT')
                 <tr>
                     <th scope="row">
-                        E-mail
+                        Name
                     </th>
                     <td>
-                        <input type="text" class="form-control" name="email" value="{{ $setting->email }}" placeholder="Email Address">
+                    <input class="form-control" type="text" name="name" id="name" value="{{ $member->name }}" placeholder="Name">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        Booking E-mail
+                        Designation
                     </th>
                     <td>
-                        <input type="text" class="form-control" name="booking" value="{{ $setting->booking }}" placeholder="Booking E-mail">
+                    <input class="form-control" type="text" name="designation" id="designation" value="{{ $member->designation }}" placeholder="Designation">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        Nick Name
+                    </th>
+                    <td>
+                    <input class="form-control" type="text" name="nickname" id="nickname" value="{{ $member->nickname }}" placeholder="Nick Name">
                     </td>
                 </tr>
                 <tr>
@@ -40,7 +48,7 @@
                         Facebook Link
                     </th>
                     <td>
-                        <input type="text" class="form-control" name="fbLink" value="{{ $setting->fbLink }}" placeholder="Facebook">
+                    <input class="form-control" type="text" name="facebook" id="facebook" value="{{ $member->facebook }}" placeholder="Facebook Link">
                     </td>
                 </tr>
                 <tr>
@@ -48,7 +56,7 @@
                         Instagram Link
                     </th>
                     <td>
-                        <input type="text" class="form-control" name="instaLink" value="{{ $setting->instaLink }}" placeholder="Instagram">
+                    <input class="form-control" type="text" name="instagram" id="instagram" value="{{ $member->instagram }}" placeholder="Instagram Link">
                     </td>
                 </tr>
                 <tr>
@@ -56,24 +64,24 @@
                         Youtube Link
                     </th>
                     <td>
-                        <input type="text" class="form-control" name="ytLink" value="{{ $setting->ytLink }}" placeholder="Youtube">
+                    <input class="form-control" type="text" name="youtube" id="youtube" value="{{ $member->youtube }}" placeholder="Youtube Link">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        Contact Number
+                        Email Address
                     </th>
                     <td>
-                        <input type="text" class="form-control" name="contact" value="{{ $setting->contact }}" placeholder="Contact Number">
+                    <input class="form-control" type="text" name="email" id="email" value="{{ $member->email }}" placeholder="Email Address">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        Bio
+                        Bio Text
                     </th>
                     <td>
-                        <textarea name="bandprofile" id="Content" row="10">
-                            {{ $setting->bandprofile }}
+                        <textarea name="bio" id="Content" row="10">
+                            {{ $member->bio }}
                         </textarea>
                     </td>
                 </tr>

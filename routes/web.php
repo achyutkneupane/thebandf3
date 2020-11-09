@@ -22,5 +22,5 @@ Auth::routes(['register' => false]);
 Route::group(['prefix' => 'admin/', 'middleware' => 'auth'], function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
     Route::resource('setting', SettingController::class);
-    Route::resource('band', BandMemberController::class);
+    Route::resource('member', BandMemberController::class);
 });

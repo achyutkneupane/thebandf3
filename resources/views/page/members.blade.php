@@ -11,81 +11,49 @@
         </div>
         <div id="f3members" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#f3members" data-slide-to="0" class="active"></li>
-              <li data-target="#f3members" data-slide-to="1"></li>
-              <li data-target="#f3members" data-slide-to="2"></li>
-              <li data-target="#f3members" data-slide-to="3"></li>
+@foreach ($members as $member)
+                <li data-target="#f3members" data-slide-to="{{ $member->id - 1}}"{{ $member->id == '1' ? ' class=active' : '' }}></li>
+@endforeach
             </ol>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                    <div class="container justify-content-between">
+@foreach ($members as $member)
+                <div class="carousel-item{{ $member->id == '1' ? ' active' : '' }}">
+                    <div class="container">
                         <div class="row">
                             <div class="col-md-5">
-                                <img class="d-block w-100" src="{{ asset('statics/members/saugat.png') }}" alt="Saugat Rai">
-                                <div class="carousel-caption d-none d-md-block shadowText">
-                                    <h1>Saugat Rai</h1>
-                                    <p>Vocalist</p>
+                                <img class="d-block w-100" src="{{ asset('statics/members/' . $member->image . '.png') }}" alt="{{ $member->name }}">
+                                <div class="carousel-caption mt-3 shadowText">
+                                    <h1>{{ $member->name }}</h1>
+                                    @isset($member->nickname)
+                                        <h3>({{ $member->nickname }})</h3>
+                                    @endisset
+                                    <p>{{ $member->designation }}</p>
                                 </div>
                             </div>
-                            <div class="col-md-7">
-                                <div class="shadowbox">
-                                    Saugat Rai
+                            <div class="col-md-7 text-white">
+                                <div class="jumbotron d-flex align-items-center justify-content-center" style="background-color:transparent !important; height : 100%;">
+                                    {!! $member->bio !!}
+                                    <div class="memberfoot">
+                                        @isset($member->facebook)
+                                            <a href="{{ $member->facebook }}" class="fa fa-facebook"></a>
+                                        @endisset
+                                        @isset($member->youtube)
+                                            <a href="{{ $member->youtube }}" class="fa fa-youtube"></a>
+                                        @endisset
+                                        @isset($member->instagram)
+                                            <a href="{{ $member->instagram }}" class="fa fa-instagram"></a>
+                                        @endisset
+                                        @isset($member->email)
+                                            <a href="{{ $member->email }}" class="fa fa-envelope"></a>
+                                        @endisset
+                                        <a href="{{ $member->email }}" class="fa fa-envelope"></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-5">
-                            <img class="d-block w-100" src="{{ asset('statics/members/adler.png') }}" alt="Sumek Yonjan(Adler)">
-                            <div class="carousel-caption d-none d-md-block mt-3 shadowText">
-                                <h1>Sumek Yonjan</h1>
-                                <h3>(Adler)</h3>
-                                <p>Drummer</p>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="shadowbox">
-                                Sumek Yonjan<br>(Adler)
-                            </div>
-                        </div>
-                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <img class="d-block w-100" src="{{ asset('statics/members/lelin.png') }}" alt="Sudarshan Thapa">
-                            <div class="carousel-caption d-none d-md-block mt-3 shadowText">
-                                <h1>Sudarshan Thapa</h1>
-                                <p>Guitarist</p>
-                            </div>
-                        </div>
-                        <div class="col-md-7 text-white">
-                            Sudarshan Thapa
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <img class="d-block w-100" src="{{ asset('statics/members/smith.png') }}" alt="Sudarshan Thapa">
-                            <div class="carousel-caption d-none d-md-block mt-3 shadowText">
-                                <h1>Smith Shrestha</h1>
-                                <p>Bassist</p>
-                            </div>
-                        </div>
-                        <div class="col-md-7 text-white">
-                            Smith Shrestha
-                        </div>
-                    </div>
-                </div>
-              </div>
+@endforeach
             </div>
         </div>
             <a class="carousel-control-prev" href="#f3members" role="button" data-slide="prev">

@@ -32,14 +32,22 @@
                             </div>
                             <div class="col-md-6 py-3">
                                 <p class="mb-4">You can contact us on any medium:</p>
-                                <p>Email: <a href="mailto:info@thebandf3.com">info@thebandf3.com</a></p>
-                                <p>Contact Number: <a href="tel:+">Contact Number</a></p>
-                                <p>For Bookings: <a href="mailto:booking@thebandf3.com">booking@thebandf3.com</a></p>
+                                <p>Email: <a href="mailto:{{ $setting->email }}">{{ $setting->email }}</a></p>
+                                <p>Contact Number: <a href="tel:+{{ $setting->contact }}">{{ $setting->contact }}</a></p>
+                                <p>For Bookings: <a href="mailto:{{ $setting->booking }}">{{ $setting->booking }}</a></p>
                                 <p class="mt-4">
-                                    <button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button>
-                                    <button type="button" class="btn btn-social-icon btn-youtube btn-rounded"><i class="fa fa-youtube"></i></button>
-                                    <button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button>
-                                    <button type="button" class="btn btn-social-icon btn-envelope btn-rounded"><i class="fa fa-envelope"></i></button>
+                                    @isset($setting->fbLink)
+                                        <a class="btn btn-social-icon btn-facebook btn-rounded" href="{{ $setting->fbLink }}"><i class="fa fa-facebook"></i></a>
+                                    @endisset
+                                    @isset($setting->ytlink)
+                                        <a class="btn btn-social-icon btn-youtube btn-rounded" href="{{ $setting->ytLink }}"><i class="fa fa-youtube"></i></a>
+                                    @endisset
+                                    @isset($setting->instaLink)
+                                        <a class="btn btn-social-icon btn-instagram btn-rounded" href="{{ $setting->instaLink }}"><i class="fa fa-instagram"></i></a>
+                                    @endisset
+                                    @isset($setting->email)
+                                        <a class="btn btn-social-icon btn-envelope btn-rounded" href="mailto:{{ $setting->email }}"><i class="fa fa-envelope"></i></a>
+                                    @endisset
                                 </p>
                             </div>
                         </div>

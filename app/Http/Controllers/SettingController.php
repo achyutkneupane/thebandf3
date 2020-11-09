@@ -74,9 +74,6 @@ class SettingController extends Controller
                 'email' => 'required',
                 'booking' => 'required',
                 'bandprofile' => 'required',
-                'fbLink' => 'required',
-                'instaLink' => 'required',
-                'ytLink' => 'required',
                 'contact' => 'required'
             ]
         );

@@ -63,7 +63,7 @@ https://www.facebook.com/ThisIsAchyut
                         @endif
                         <div class="list-group-flush">
                             <div class="list-group-item">
-                                <a href="{{route('band.index')}}">
+                                <a href="{{route('member.index')}}">
                                     Band Members
                                 </a>
                             </div>

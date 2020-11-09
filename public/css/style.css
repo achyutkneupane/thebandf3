@@ -215,7 +215,43 @@ body {
     width: 100% !important;
     height: 75vh;
 }
+.memberfoot {
+    bottom: 5%;
+    width: 100%;
+    position: absolute;
+}
+.memberfoot .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 8%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
 
+.memberfoot .fa:hover {
+    opacity: 0.7;
+}
+
+.memberfoot .fa-facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.memberfoot .fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.memberfoot .fa-instagram {
+    background: #dc4a38;
+    color: white;
+}
+
+.memberfoot .fa-envelope {
+    background: #3c3c3c;
+    color: white;
+}
 /* Contact */
 .contactText {
     font-size: 1rem;
@@ -279,4 +315,21 @@ body {
 }
 .footer a {
     color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+    .bannerSection {
+        padding-top: 85vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    .memberfoot {
+        margin-top: 20%;
+        bottom: 30%;
+        position: relative;
+    }
+
+    .bannerSection {
+        padding-top: 90vh;
+    }
 }
