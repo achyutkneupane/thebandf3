@@ -79,7 +79,6 @@ class BandMemberController extends Controller
         $member->name = $request->name;
         $member->bio = $request->bio;
         $member->nickname = $request->nickname;
-        $member->image = $request->image;
         $member->facebook = $request->facebook;
         $member->instagram = $request->instagram;
         $member->youtube = $request->youtube;

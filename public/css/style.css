@@ -215,20 +215,6 @@ body {
     width: 100% !important;
     height: 75vh;
 }
-.memberfoot {
-    bottom: 5%;
-    width: 100%;
-    position: absolute;
-}
-.memberfoot .fa {
-    padding: 15px;
-    font-size: 20px;
-    width: 8%;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-}
-
 .memberfoot .fa:hover {
     opacity: 0.7;
 }
@@ -323,13 +309,29 @@ body {
     }
 }
 @media screen and (max-width: 768px) {
-    .memberfoot {
-        margin-top: 20%;
-        bottom: 30%;
-        position: relative;
+    .memberfoot .fa {
+        padding: 10px;
+        font-size: 18px;
+        width: 10%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
     }
-
     .bannerSection {
         padding-top: 90vh;
+    }
+}
+@media screen and (min-width: 768px) {
+    .memberfoot {
+        width: 100%;
+        position: absolute;
+    }
+    .memberfoot .fa {
+        padding: 15px;
+        font-size: 25px;
+        width: 8%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
     }
 }

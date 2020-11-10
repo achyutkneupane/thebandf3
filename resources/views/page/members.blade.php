@@ -32,8 +32,11 @@
                             </div>
                             <div class="col-md-7 text-white">
                                 <div class="jumbotron d-flex align-items-center justify-content-center" style="background-color:transparent !important; height : 100%;">
-                                    {!! $member->bio !!}
-                                    <div class="memberfoot">
+                                    <div class="lead">
+                                        {!! $member->bio !!}
+                                        <div class="container-fluid">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 memberfoot">
                                         @isset($member->facebook)
                                             <a href="{{ $member->facebook }}" class="fa fa-facebook"></a>
                                         @endisset
@@ -44,9 +47,11 @@
                                             <a href="{{ $member->instagram }}" class="fa fa-instagram"></a>
                                         @endisset
                                         @isset($member->email)
-                                            <a href="{{ $member->email }}" class="fa fa-envelope"></a>
+                                            <a href="mailto:{{ $member->email }}" class="fa fa-envelope"></a>
                                         @endisset
-                                        <a href="{{ $member->email }}" class="fa fa-envelope"></a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
